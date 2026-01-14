@@ -18,7 +18,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://yourapp.vercel.app"
+    "https://coachingcms.vercel.app/"
   ],
   credentials: true
 }));
