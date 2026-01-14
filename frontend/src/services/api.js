@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://coachingcms.vercel.app/",
+  baseURL: process.env.REACT_APP_BACKEND_URL,
+  withCredentials: true
 });
 
 // Attach token automatically
@@ -13,7 +14,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-// Log response errors
+// Log response errors (keep this, it's good)
 API.interceptors.response.use(
   (res) => res,
   (err) => {
