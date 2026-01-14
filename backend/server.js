@@ -18,7 +18,9 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://coachingcms.vercel.app/"
+    "http://localhost:5000",
+    /\.vercel\.app$/,  // Accept any Vercel subdomain
+    process.env.FRONTEND_URL || ""  // Accept custom domain from env
   ],
   credentials: true
 }));
