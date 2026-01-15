@@ -19,6 +19,7 @@ app.use(cors({
   origin: [
     "http://localhost:3000",
     "http://localhost:5000",
+    "https://coachingcms.vercel.app",
     /\.vercel\.app$/,  // Accept any Vercel subdomain
     process.env.FRONTEND_URL || ""  // Accept custom domain from env
   ],
